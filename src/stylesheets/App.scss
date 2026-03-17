@@ -1,0 +1,153 @@
+.app-root {
+  background: #070e1a;
+  color: #e8f0ff;
+  font-family: system-ui, sans-serif;
+}
+
+
+/* ============================= */
+/* HERO                          */
+/* ============================= */
+
+.hero {
+  padding: 140px 16px 120px;
+  text-align: center;
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+
+  .hero-sub {
+    font-size: 1.2rem;
+    color: #9fb0c8;
+    margin-top: 0.5rem;
+  }
+}
+
+
+/* ============================= */
+/* GENERIC SECTIONS              */
+/* ============================= */
+
+.section-dark {
+  padding: 100px 0;
+}
+
+.section-contact {
+  padding: 100px 0;
+  background: #0b1528;
+}
+
+
+/* ============================= */
+/* PROJECTS + SERVICES LAYOUT    */
+/* ============================= */
+
+.split-layout {
+  display: grid;
+  gap: 40px;
+
+  grid-template-columns: 1fr;
+
+  @media (min-width: 992px) {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
+
+
+/* ============================= */
+/* REVEAL ANIMATION              */
+/* ============================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.7s ease;
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* ============================= */
+/* CARD-LIKE SECTION ANIMATION   */
+/* ============================= */
+
+.reveal-card {
+  position: relative;
+  background: rgba(12, 26, 55, 0.85);
+  border-radius: 18px;
+  padding: 40px;
+  box-shadow: 0 30px 70px rgba(0,0,0,0.55);
+
+  opacity: 0;
+  transition:
+    transform 0.8s cubic-bezier(.22,1,.36,1),
+    opacity 0.6s ease;
+
+  will-change: transform, opacity;
+}
+
+
+/* entering while scrolling DOWN (comes from below) */
+
+.reveal-card.from-down {
+  transform: translateY(80px);
+}
+
+
+/* entering while scrolling UP (comes from above) */
+
+.reveal-card.from-up {
+  transform: translateY(-80px);
+}
+
+
+/* visible state */
+
+.reveal-card.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* ================================= */
+/* FULL-SCREEN PANEL SECTIONS         */
+/* ================================= */
+
+.section-dark,
+.section-contact,
+.hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Different panel backgrounds */
+
+.hero {
+  background: #070e1a;
+  padding: 140px 0 120px;
+}
+
+.section-dark {
+  background: #0b1528;
+  padding: 0px;
+  max-width: 100%;
+}
+
+.section-contact {
+  background: #0e1c34;
+  // padding: 120px 0;
+}
+
+.container {
+  max-width: 100% !important;
+  padding: 0px! important;
+  margin-right: 0px !important;
+  margin-left: 0px !important;
+  padding: 0px;
+}
