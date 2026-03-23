@@ -1,8 +1,8 @@
-
 export interface ServiceGroup {
   id: string
   title: string
   items: string[]
+  image?: string 
 }
 
 export const services: ServiceGroup[] = [
@@ -20,6 +20,7 @@ export const services: ServiceGroup[] = [
   {
     id: "networking",
     title: "Networking & Infrastructure",
+    image: "/computers-server.jpg",
     items: [
       "LAN/WAN configuration & troubleshooting",
       "DNS, DHCP, VLANs, firewalls",

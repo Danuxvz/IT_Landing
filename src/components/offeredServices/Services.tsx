@@ -118,8 +118,12 @@ export default function Services() {
           {/* IMAGE */}
           <div key={active.id} className="services-image">
             <img
-              src="https://picsum.photos/900/600"
-              alt=""
+              src={active.image || "https://picsum.photos/900/600"}
+              alt={active.title}
+              onError={(e) => {
+                const target = e.currentTarget
+                target.src = "https://picsum.photos/900/600"
+              }}
             />
           </div>
 

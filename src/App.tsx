@@ -1,3 +1,4 @@
+import { useRef } from "react"
 import './stylesheets/App.scss'
 import Projects from './components/projects/Projects'
 import Services from './components/offeredServices/Services'
@@ -5,6 +6,15 @@ import Background from './components/background/Background'
 import Reveal from './components/ui/Reveal'
 
 function App() {
+  const projectsRef = useRef<HTMLDivElement | null>(null)
+
+  function scrollToProjects() {
+    projectsRef.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    })
+  }
+
   return (
     <div className="app-root">
 
@@ -16,7 +26,10 @@ function App() {
             Software Developer • IT Specialist • Cybersecurity Enthusiast
           </p>
 
-          <button className="btn btn-primary btn-lg mt-3">
+          <button
+            className="btn btn-primary btn-lg mt-3"
+            onClick={scrollToProjects}
+          >
             View My Work
           </button>
         </div>
@@ -32,14 +45,16 @@ function App() {
       </section>
 
       {/* PROJECTS */}
-      <section className="section-dark">
+      <section
+        ref={projectsRef}
+        className="section-dark"
+      >
         <div className="container">
           <Reveal>
             <Projects />
           </Reveal>
         </div>
       </section>
-
 
       {/* BACKGROUND */}
       <section className="section-dark">
@@ -49,7 +64,6 @@ function App() {
           </Reveal>
         </div>
       </section>
-
 
       {/* CONTACT */}
       <section className="section-contact">
