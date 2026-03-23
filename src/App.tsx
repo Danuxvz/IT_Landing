@@ -11,7 +11,7 @@ function App() {
       {/* HERO */}
       <section className="hero">
         <div className="container text-center">
-          <h1>Danux P</h1>
+          <h1>Allan Perez Castaneda</h1>
           <p className="hero-sub">
             Software Developer • IT Specialist • Cybersecurity Enthusiast
           </p>
@@ -55,7 +55,7 @@ function App() {
       <section className="section-contact">
         <div className="container text-center">
           <h2>Contact</h2>
-          <p>danux@email.com</p>
+          <p>d4nixvz@email.com</p>
 
           <button className="btn btn-outline-light">
             Download Resume
