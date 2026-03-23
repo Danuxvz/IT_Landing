@@ -1,124 +1,116 @@
 .background-section {
-	background: #070e1a;
-	color: #e8f0ff;
-	padding: 120px 16px;
-	overflow: hidden;
+  background: #070e1a;
+  color: #e8f0ff;
+  padding: 100px 16px;
 }
 
-section .section-title {
-	color: #3c78ff;
-	margin-bottom: 0.5rem;
-	text-align: left;
-}   
-
-
 /* ============================= */
-/* STAGE                         */
+/* MOBILE FIRST (STACKED)        */
 /* ============================= */
 
 .bg-stage {
-	position: relative;
-	max-width: 1000px;
-	height: 620px;
-	margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
-
-
-/* ============================= */
-/* BASE PANEL STYLE              */
-/* ============================= */
 
 .panel {
-	position: absolute;
-	border-radius: 18px;
-	overflow: hidden;
-	backdrop-filter: blur(6px);
+  position: relative;
+  border-radius: 16px;
+  background: rgba(10, 20, 40, 0.85);
+  backdrop-filter: blur(6px);
+  padding: 18px;
+
+  box-shadow:
+    0 10px 25px rgba(0,0,0,0.35);
 }
 
-
-/* ============================= */
-/* EXPERIENCE                    */
-/* ============================= */
-
-.panel-experience {
-	left: 0;
-	top: 15px;
-	width: 48%;
-	height: 80%;
-
-	background: rgba(12, 26, 55, 0.9);
-
-	z-index: 2;
-
-	// box-shadow:
-	// 0 40px 80px rgba(0,0,0,0.55);
-}
-
-.experience-item {
-	margin-bottom: 18px;
-	color: white;
-}
-.experience-item h6 {
-	font-size: 1.1rem;
-	margin-bottom: 4px;
-	opacity: 0.65;
-}
-
-
-/* ============================= */
-/* SKILLS                        */
-/* ============================= */
-
-.panel-skills {
-	right: 10px;
-	top: 0;
-	width: 56%;
-	height: 38%;
-
-	background: rgba(10, 20, 40, 0.9);
-
-	z-index: 3;
-
-	box-shadow:
-	0 35px 70px rgba(0,0,0,0.6),
-	0 0 60px rgba(60,120,255,0.12);
-}
-
-
-/* ============================= */
-/* EDUCATION                     */
-/* ============================= */
-
-.panel-education {
-	right: 0;
-	bottom: 0;
-	width: 53%;
-	height: 63%;
-
-	background: rgba(10, 20, 40, 0.8);
-
-	z-index: 1;
-
-	box-shadow:
-	0 20px 40px rgba(0,0,0,0.45);
-}
-
-
-/* ============================= */
-/* INNER CARD STYLING            */
-/* ============================= */
-
+/* Remove weird absolute inner behavior */
 .panel .card,
 .panel .experience-section,
 .panel .education-wrapper,
 .panel .skills-section {
-	background: transparent;
-	box-shadow: none;
-	border-radius: 0;
-	height: 100%;
-	overflow-y: visible;
-	position: absolute;
-	padding: 24px;
+  position: relative;
+  padding: 0;
+  height: auto;
+  overflow: visible;
+}
+
+/* ============================= */
+/* DESKTOP (LAYERED EFFECT)      */
+/* ============================= */
+
+@media (min-width: 900px) {
+  .bg-stage {
+    position: relative;
+    height: 620px;
+    display: block;
+  }
+
+  .panel {
+    position: absolute;
+    padding: 24px;
+  }
+
+  /* EXPERIENCE */
+  .panel-experience {
+    left: 0;
+    top: 20px;
+    width: 48%;
+    height: 78%;
+    z-index: 2;
+
+    background: rgba(12, 26, 55, 0.9);
+
+    box-shadow:
+      0 40px 80px rgba(0,0,0,0.55);
+  }
+
+  /* SKILLS (TOP) */
+  .panel-skills {
+    right: 10px;
+    top: 0;
+    width: 56%;
+    height: 38%;
+    z-index: 3;
+
+    box-shadow:
+      0 35px 70px rgba(0,0,0,0.6),
+      0 0 60px rgba(60,120,255,0.12);
+  }
+
+  /* EDUCATION (BOTTOM) */
+  .panel-education {
+    right: 0;
+    bottom: 0;
+    width: 53%;
+    height: 63%;
+    z-index: 1;
+
+    box-shadow:
+      0 20px 40px rgba(0,0,0,0.45);
+  }
+
+  /* Restore full fill behavior */
+  .panel .card,
+  .panel .experience-section,
+  .panel .education-wrapper,
+  .panel .skills-section {
+    position: absolute;
+    inset: 0;
+    padding: 24px;
+  }
 }
 
 
+.panel {
+  transition: transform 0.4s ease;
+}
+
+@media (min-width: 900px) {
+  .panel-skills:hover { transform: translateY(-6px); }
+  .panel-experience:hover { transform: translateY(-4px); }
+  .panel-education:hover { transform: translateY(-2px); }
+}

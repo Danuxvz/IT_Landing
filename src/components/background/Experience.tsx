@@ -1,4 +1,4 @@
-    import "../../stylesheets/Background.scss"
+import "../../stylesheets/Background.scss"
 
 export default function Experience() {
   return (
