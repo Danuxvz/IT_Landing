@@ -5,7 +5,7 @@ export default function Skills() {
   return (
     <section className="skills-section">
 
-      <h2 className="skills-title">Skills</h2>
+      <h2 className="section-title">Skills</h2>
 
       <div className="skills-grid">
         {skillCategories.map((cat, i) => (

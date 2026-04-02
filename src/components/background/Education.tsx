@@ -2,7 +2,7 @@ import "../../stylesheets/Background.scss"
 
 export default function Education() {
   return (
-    <div className="education-wrapper card shadow-sm">
+    <div className="education-wrapper shadow-sm">
       <h2 className="section-title">Education</h2>
       <ul className="list-group list-group-flush">
         <li className="list-group-item">

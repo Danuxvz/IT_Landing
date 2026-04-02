@@ -1,5 +1,5 @@
 .background-section {
-  background: #070e1a;
+  // background: #070e1a;
   color: #e8f0ff;
   padding: 100px 16px;
 }
@@ -19,7 +19,7 @@
 .panel {
   position: relative;
   border-radius: 16px;
-  background: rgba(10, 20, 40, 0.85);
+  background: rgba(25, 45, 85, 0.45);
   backdrop-filter: blur(6px);
   padding: 18px;
 
@@ -62,7 +62,7 @@
     height: 78%;
     z-index: 2;
 
-    background: rgba(12, 26, 55, 0.9);
+    // background: rgba(12, 26, 55, 0.9);
 
     box-shadow:
       0 40px 80px rgba(0,0,0,0.55);
@@ -93,6 +93,21 @@
       0 20px 40px rgba(0,0,0,0.45);
   }
 
+  .list-group {
+    background: transparent; 
+    border: none;
+    padding: 6px 0;
+  }
+
+  .list-group-item {
+    background-color: transparent !important;
+    border: none;
+    padding: 6px 0;
+    color: #ffffff !important;
+    font-size: 0.95rem;
+    opacity: 0.85;
+  } 
+
   /* Restore full fill behavior */
   .panel .card,
   .panel .experience-section,
@@ -101,8 +116,17 @@
     position: absolute;
     inset: 0;
     padding: 24px;
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+
   }
 }
+
+.section-title {
+  color: #4980ff;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
 
 
 .panel {

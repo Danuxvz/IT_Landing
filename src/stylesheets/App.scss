@@ -1,9 +1,18 @@
 .app-root {
-  background: #070e1a;
-  color: #e8f0ff;
-  font-family: system-ui, sans-serif;
-}
+  position: relative;
+  min-height: 100vh;
+  color: #ffffff;
+  overflow-x: hidden;
 
+  background: linear-gradient(
+    to bottom,
+    #1478d0 0%,     // bright sky
+    #4da0ff 25%,    // lighter blue
+    #7a6cff 50%,    // purple transition
+    #3b3fa8 75%,    // dusk
+    #0b1a3a 100%    // night
+  );
+}
 
 /* ============================= */
 /* HERO                          */
@@ -129,12 +138,12 @@
 /* Different panel backgrounds */
 
 .hero {
-  background: #070e1a;
+  background: #bad3ff opacity(20%);
   padding: 140px 0 120px;
 }
 
 .section-dark {
-  background: #0b1528;
+  // background: #0b1528;
   padding: 0px;
   max-width: 100%;
 }
@@ -142,7 +151,7 @@
 .section-contact {
   background: #0e1c34;
   // padding: 120px 0;
-}
+} 
 
 .container {
   max-width: 100% !important;
