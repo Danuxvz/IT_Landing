@@ -26,20 +26,20 @@
 	max-width: 700px;
 	margin: 0 auto;
 
-	-webkit-mask-image: linear-gradient(
-		to right,
-		transparent 0%,
-		black 8%,
-		black 92%,
-		transparent 100%
-	);
-	mask-image: linear-gradient(
-		to right,
-		transparent 0%,
-		black 8%,
-		black 92%,
-		transparent 100%
-	);
+  -webkit-mask-image: linear-gradient(
+	to right,
+	transparent 0%,
+	black 15%,
+	black 85%,
+	transparent 100%
+  );
+  mask-image: linear-gradient(
+	to right,
+	transparent 0%,
+	black 15%,
+	black 85%,
+	transparent 100%
+  );
 }
 
 .carousel-track {
@@ -56,7 +56,8 @@
 .project-card {
 	min-width: 80%;
 	max-width: 520px;
-	// background: #161a22;
+	background: rgba(15, 25, 50, 0.8);
+	backdrop-filter: blur(8px);
 	margin-left: 10px;
 	margin-right: 10px;
 

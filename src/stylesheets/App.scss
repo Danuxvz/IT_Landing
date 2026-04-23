@@ -1,17 +1,18 @@
 .app-root {
-  position: relative;
-  min-height: 100vh;
-  color: #ffffff;
-  overflow-x: hidden;
+	position: relative;
+	min-height: 100vh;
+	color: #ffffff;
+	overflow-x: hidden;
+	text-shadow: 0 2px 8px rgba(0,0,0,0.2);
 
-  background: linear-gradient(
-    to bottom,
-    #1478d0 0%,     // bright sky
-    #4da0ff 25%,    // lighter blue
-    #7a6cff 50%,    // purple transition
-    #3b3fa8 75%,    // dusk
-    #0b1a3a 100%    // night
-  );
+	// background: linear-gradient(
+	//   to bottom,
+	//   #1478d0 0%,     // bright sky
+	//   #4da0ff 25%,    // lighter blue
+	//   #7a6cff 50%,    // purple transition
+	//   #3b3fa8 75%,    // dusk
+	//   #0b1a3a 100%    // night
+	// );
 }
 
 /* ============================= */
@@ -19,19 +20,21 @@
 /* ============================= */
 
 .hero {
-  padding: 140px 16px 120px;
-  text-align: center;
+	padding: 80px 16px 60px;
+	background: rgba(10, 18, 40, 0.9); 
+	backdrop-filter: blur(6px);
+	text-align: center;
 
-  h1 {
-    font-size: 3rem;
-    font-weight: 700;
-  }
+	h1 {
+		font-size: 2.8rem;
+		font-weight: 700;
+	}
 
-  .hero-sub {
-    font-size: 1.2rem;
-    color: #9fb0c8;
-    margin-top: 0.5rem;
-  }
+	.hero-sub {
+		font-size: 1.1rem;
+		color: #b0c5de;
+		margin-top: 0.4rem;
+	}
 }
 
 
@@ -40,12 +43,12 @@
 /* ============================= */
 
 .section-dark {
-  padding: 100px 0;
+	padding: 100px 0;
 }
 
 .section-contact {
-  padding: 100px 0;
-  background: #0b1528;
+	padding: 100px 0;
+	background: #0b1528;
 }
 
 
@@ -54,15 +57,15 @@
 /* ============================= */
 
 .split-layout {
-  display: grid;
-  gap: 40px;
+	display: grid;
+	gap: 40px;
 
-  grid-template-columns: 1fr;
+	grid-template-columns: 1fr;
 
-  @media (min-width: 992px) {
-    grid-template-columns: 1fr 1fr;
-    align-items: start;
-  }
+	@media (min-width: 992px) {
+		grid-template-columns: 1fr 1fr;
+		align-items: start;
+	}
 }
 
 
@@ -71,14 +74,14 @@
 /* ============================= */
 
 .reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.7s ease;
+	opacity: 0;
+	transform: translateY(40px);
+	transition: all 0.7s ease;
 }
 
 .reveal-visible {
-  opacity: 1;
-  transform: translateY(0);
+	opacity: 1;
+	transform: translateY(0);
 }
 
 
@@ -87,40 +90,40 @@
 /* ============================= */
 
 .reveal-card {
-  position: relative;
-  background: rgba(12, 26, 55, 0.85);
-  border-radius: 18px;
-  padding: 40px;
-  box-shadow: 0 30px 70px rgba(0,0,0,0.55);
+	position: relative;
+	background: rgba(12, 26, 55, 0.85);
+	border-radius: 18px;
+	padding: 40px;
+	box-shadow: 0 30px 70px rgba(0,0,0,0.55);
 
-  opacity: 0;
-  transition:
-    transform 0.8s cubic-bezier(.22,1,.36,1),
-    opacity 0.6s ease;
+	opacity: 0;
+	transition:
+		transform 0.8s cubic-bezier(.22,1,.36,1),
+		opacity 0.6s ease;
 
-  will-change: transform, opacity;
+	will-change: transform, opacity;
 }
 
 
 /* entering while scrolling DOWN (comes from below) */
 
 .reveal-card.from-down {
-  transform: translateY(80px);
+	transform: translateY(80px);
 }
 
 
 /* entering while scrolling UP (comes from above) */
 
 .reveal-card.from-up {
-  transform: translateY(-80px);
+	transform: translateY(-80px);
 }
 
 
 /* visible state */
 
 .reveal-card.visible {
-  transform: translateY(0);
-  opacity: 1;
+	transform: translateY(0);
+	opacity: 1;
 }
 
 /* ================================= */
@@ -130,37 +133,37 @@
 .section-dark,
 .section-contact,
 .hero {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
+	position: relative;
+	width: 100%;
+	overflow: hidden;
 }
 
 /* Different panel backgrounds */
 
 .hero {
-  background: #bad3ff opacity(20%);
-  padding: 140px 0 120px;
+	background: #bad3ff opacity(20%);
+	padding: 140px 0 120px;
 }
 
 .section-dark {
-  // background: #0b1528;
-  padding: 0px;
-  max-width: 100%;
+	// background: #0b1528;
+	padding: 0px;
+	max-width: 100%;
 }
 
 .section-contact {
-  background: #0e1c34;
-  // padding: 120px 0;
+	background: #0e1c34;
+	// padding: 120px 0;
 } 
 
 .container {
-  max-width: 100% !important;
-  padding: 0px! important;
-  margin-right: 0px !important;
-  margin-left: 0px !important;
-  padding: 0px;
+	max-width: 100% !important;
+	padding: 0px! important;
+	margin-right: 0px !important;
+	margin-left: 0px !important;
+	padding: 0px;
 }
 
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
